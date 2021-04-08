@@ -6,11 +6,11 @@ Minecraft recipes are often hard to remember and even harder to figure out on yo
 
 ## Wireframes
 ERD
-![wireframe](./assets/mra-erd.png)
+![wireframe](assets/mra-erd.png)
 Home Screen
-![wireframe](./assets/mra-home-screen.png)
+![wireframe](assets/mra-home-screen.png)
 Recipe Book
-![wireframe](./assets/mra-recipe-book.png)
+![wireframe](assets/mra-recipe-book.png)
 ## User Stories
 - When I load the page for the first time, I see the homescreen with links to 'Home', 'Signup', and 'Login' as well as a form with a search bar to input ingredients and quantities and a 'Get Recipes!' button
 - When I click the 'Signup' link, an input form appears where I can input my name, email, and password
