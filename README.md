@@ -20,6 +20,7 @@ Recipe Book
 - When I click the 'Save Recipe' button, I am redirected to my recipe book and all of the recipes I've saved are displayed along with a 'Delete' button for each
 - When I click the 'Delete' button for a certain recipe, that recipe is removed from my recipe book
 - When I click the 'Logout' link I am redirected to the homescreen as if visiting the website for the first time
+## Routes
 ## MVP Goals
 - Able to signup as a new user
 - Able to login with user authentication
