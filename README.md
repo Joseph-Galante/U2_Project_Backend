@@ -6,7 +6,7 @@ Minecraft recipes are often hard to remember and even harder to figure out on yo
 
 ## Wireframes
 ERD
-![wireframe](./assets/images/minecraft-recipes-erd.png)
+![wireframe](./assets/wireframes/minecraft-recipes-erd.png)
 Home Screen
 ![wireframe](./assets/wireframes/mra-home-screen.png)
 Recipe Book
