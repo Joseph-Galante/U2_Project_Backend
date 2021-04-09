@@ -32,15 +32,19 @@ Recipe Book
 ## MVP Goals
 - Able to signup as a new user
 - Able to login with user authentication
+- Able to update user info
 - Able to logout while logged in
 - Able to search for food recipes with given ingredients
 - Able to save recipes to a personal recipe book
+- Able to update recipe names
 - Able to remove recipes from recipe book
 ## Routes
     - Signup - POST /users
     - Login - POST /users/login
+    - Update User Info - PUT /users/profile
     - Search - GET /users/ingredients
     - Save Recipe - POST /users/recipes
+    - Update Recipe - PUT /users/recipes/:id
     - Delete Recipe - DELETE /users/recipes
 ## Stretch Goals
 - Make divs for recipes similar to minecraft crafting table layout
