@@ -8,12 +8,15 @@ Minecraft recipes are often hard to remember and even harder to figure out on yo
 ERD
 ![wireframe](https://i.imgur.com/sCuVSRA.png)
 - Shows the dual many-to-many relationship
+
 Home Screen
 ![wireframe](https://i.imgur.com/UngJ4LR.png)
 - Allows user to search for recipes with ingredients
+
 Recipe Book
 ![wireframe](https://i.imgur.com/YdBQp37.png?1)
 - Shows a user's saved recipes
+
 ## User Stories
 - When I load the page for the first time, I see the homescreen with links to 'Home', 'Signup', and 'Login' as well as a form with a search bar to input ingredients and quantities and a 'Get Recipes!' button
 - When I click the 'Signup' link, an input form appears where I can input my name, email, and password
