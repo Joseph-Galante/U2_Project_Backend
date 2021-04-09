@@ -12,7 +12,6 @@ const routesReport = rowdy.begin(app)
 
 // route modules
 const userRoutes = require('./routes/userRoutes');
-const locationRoutes = require('./routes/locationRoutes');
 
 // allow json body for api write methods
 app.use(express.json())
