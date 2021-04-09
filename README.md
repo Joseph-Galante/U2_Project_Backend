@@ -1,8 +1,8 @@
 # U2_Project_Backend
-GA Solo Project 2 - Minecraft Recipe API
+GA Solo Project 2 - Minecraft Recipe App
 
 ## Overview
-Minecraft recipes are often hard to remember and even harder to figure out on your own. This API provides a way to search all available recipes based on what ingredients you have. Input whatever ingredients you are curious about and see what recipes can be made from them!
+Minecraft recipes are often hard to remember and even harder to figure out on your own. This app provides a way to search all available recipes based on what ingredients you have. Input whatever ingredients you are curious about and see what recipes can be made from them!
 
 ## Wireframes
 ERD

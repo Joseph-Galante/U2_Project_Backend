@@ -4,7 +4,8 @@
   "description": "GA Solo Project 2 - Minecraft Recipe API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -18,9 +19,12 @@
   "homepage": "https://github.com/Joseph-Galante/U2_Project_Backend#readme",
   "dependencies": {
     "axios": "^0.21.1",
+    "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
     "pg": "^8.5.1",
     "rowdy-logger": "^1.0.2",
     "sequelize": "^6.6.2"

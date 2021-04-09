@@ -11,15 +11,6 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-   await queryInterface.bulkInsert('users', [
-     {
-       name: 'admin',
-       email: 'admin',
-       password: 'password',
-       createdAt: new Date(),
-       updatedAt: new Date()
-     }
-   ])
   },
 
   down: async (queryInterface, Sequelize) => {
