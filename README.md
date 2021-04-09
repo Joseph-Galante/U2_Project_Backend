@@ -1,5 +1,5 @@
 # U2_Project_Backend
-GA Solo Project 2
+GA Solo Project 2 - Minecraft Recipe API
 
 ## Overview
 Minecraft recipes are often hard to remember and even harder to figure out on your own. This API provides a way to search all available recipes based on what ingredients you have. Input whatever ingredients you are curious about and see what recipes can be made from them!
@@ -20,7 +20,6 @@ Recipe Book
 - When I click the 'Save Recipe' button, I am redirected to my recipe book and all of the recipes I've saved are displayed along with a 'Delete' button for each
 - When I click the 'Delete' button for a certain recipe, that recipe is removed from my recipe book
 - When I click the 'Logout' link I am redirected to the homescreen as if visiting the website for the first time
-## Routes
 ## MVP Goals
 - Able to signup as a new user
 - Able to login with user authentication
@@ -28,7 +27,13 @@ Recipe Book
 - Able to search for food recipes with given ingredients
 - Able to save recipes to a personal recipe book
 - Able to remove recipes from recipe book
+## Routes
+    - Signup - POST /users
+    - Login - POST /users/login
+    - Search - GET /users/ingredients
+    - Save Recipe - POST /users/recipes
+    - Delete Recipe - DELETE /users/recipes
 ## Stretch Goals
 - Make divs for recipes similar to minecraft crafting table layout
 - More recipes than food recipes
-- Make it real purty
+- Make it real purty (CSS)
