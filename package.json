@@ -1,7 +1,7 @@
 {
   "name": "u2_project_backend",
   "version": "1.0.0",
-  "description": "GA Solo Project 2 - Minecraft Recipe API",
+  "description": "GA Solo Project 2 - Minecraft Recipe App",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
