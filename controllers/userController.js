@@ -126,4 +126,30 @@ userController.profile = async (req, res) =>
     }
 }
 
+// update profile
+userController.update = async (req, res) =>
+{
+    try {
+        // grab user
+        const user = req.user;
+        // check if user exists
+        if (user)
+        {
+            // update user
+            user.update(req.body);
+            // return user
+            res.json({ message: 'user profile updated', user })
+        }
+        // no user
+        else
+        {
+            // status 404 - could not be found
+            res.status(404).json({ error: 'no profile found'});
+        }
+    } catch (error) {
+        // status 400 - bad request
+        res.status(400).json({ error: 'failed to  update profile'});
+    }
+}
+
 module.exports = userController;

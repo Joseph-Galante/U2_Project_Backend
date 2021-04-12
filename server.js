@@ -13,6 +13,7 @@ const routesReport = rowdy.begin(app);
 
 // route modules
 const userRoutes = require('./routes/userRoutes');
+const recipeRoutes = require('./routes/recipeRoutes');
 
 // controller modules
 const userController = require('./controllers/userController');
@@ -33,10 +34,12 @@ app.use(morgan('tiny'));
 app.use(userController.authorizeUser);
 app.use('/users', userRoutes);
 
+app.use('/recipes', recipeRoutes);
+
 
 //=============== SERVER ===============//
 
-const PORT = process.env.port || 3001
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`backend server on port ${PORT}`);
   routesReport.print();

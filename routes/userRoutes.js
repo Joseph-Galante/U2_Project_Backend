@@ -9,5 +9,6 @@ const userRoutes = express.Router();
 userRoutes.post('/', userController.create);
 userRoutes.post('/login', userController.login);
 userRoutes.get('/profile', userController.profile);
+userRoutes.put('/profile', userController.update);
 
 module.exports = userRoutes;
