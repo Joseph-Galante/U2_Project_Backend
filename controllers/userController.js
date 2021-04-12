@@ -102,7 +102,6 @@ userController.create = async (req, res) =>
 userController.login = async (req, res) =>
 {
     try {
-        console.log('hi')
         // grab user by email
         const user = await models.user.findOne({ where: { email: req.body.email}});
         // check if passwords match
