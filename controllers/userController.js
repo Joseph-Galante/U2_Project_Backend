@@ -44,6 +44,28 @@ userController.authorizeUser = async (req, res, next) =>
 
 //=============== METHODS ===============//
 
+// get all users
+userController.getAll = async (req, res) =>
+{
+    try {
+        // grab all users
+        const users = await models.user.findAll();
+        // check if users exist
+        if (users)
+        {
+            // return users
+            res.json({ message: 'users found', users });
+        }
+        // no users
+        else
+        {
+            res.status(404).json({ error: 'no users found'})
+        }
+    } catch (error) {
+        res.status(400).json({ error: 'could not get users' });
+    }
+}
+
 // signup
 userController.create = async (req, res) =>
 {

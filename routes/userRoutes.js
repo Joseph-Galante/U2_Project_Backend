@@ -6,6 +6,7 @@ const express = require('express');
 const userRoutes = express.Router();
 
 // routes
+userRoutes.get('/', userController.getAll);
 userRoutes.post('/', userController.create);
 userRoutes.post('/login', userController.login);
 userRoutes.get('/profile', userController.profile);
