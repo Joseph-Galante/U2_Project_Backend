@@ -11,5 +11,7 @@ userRoutes.post('/', userController.create);
 userRoutes.post('/login', userController.login);
 userRoutes.get('/profile', userController.profile);
 userRoutes.put('/profile', userController.update);
+userRoutes.post('/recipes', userController.saveRecipe);
+userRoutes.get('/recipes', userController.getSavedRecipes);
 
 module.exports = userRoutes;

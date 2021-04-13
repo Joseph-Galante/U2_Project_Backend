@@ -174,4 +174,77 @@ userController.update = async (req, res) =>
     }
 }
 
+// save recipe
+userController.saveRecipe = async (req, res) =>
+{
+    try {
+        // grab recipe by name
+        const recipe = await models.recipe.findOne({ where: { name: req.body.recipe}});
+        // check if recipe exists
+        if (recipe)
+        {
+            // grab users saved recipes
+            const savedRecipes = await req.user.getRecipes();
+            // check if saved recipes is empty
+            if (savedRecipes.length === 0)
+            {
+                // save recipe to user
+                req.user.addRecipe(recipe);
+                // return message
+                res.json({ message: 'recipe save successfull', recipe });
+            }
+            // not empty
+            else
+            {
+                // check if recipe is already saved under user
+                for (let i = 0; i < savedRecipes.length; i++)
+                {
+                    // recipe already saved
+                    if (savedRecipes[i].id === recipe.id)
+                    {
+                        res.json({ message: 'recipe already saved' });
+                        return;
+                    }
+                    // recipe not saved
+                    if (i === savedRecipes.length - 1)
+                    {
+                        // save recipe to user
+                        req.user.addRecipe(recipe);
+                        // return message
+                        res.json({ message: 'recipe save successfull', recipe });
+                    }
+                }
+            }
+        }
+        // no recipe found
+        else
+        {
+            res.status(404).json({ error: 'could not find recipe' });
+        }
+    } catch (error) {
+        res.status(400).json({ error: 'could not save recipe' });
+    }
+}
+
+// get saved recipes
+userController.getSavedRecipes = async (req, res) =>
+{
+    try {
+        // grab recipe by name
+        const recipes = await req.user.getRecipes();
+        // check if recipes exist
+        if (recipes)
+        {
+            res.json({ recipes });
+        }
+        // no recipes found
+        else
+        {
+            res.status(404).json({ error: 'could not find recipes' });
+        }
+    } catch (error) {
+        res.status(400).json({ error: 'could not get saved recipes' });
+    }
+}
+
 module.exports = userController;
