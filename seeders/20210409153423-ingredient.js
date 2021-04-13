@@ -111,6 +111,11 @@ module.exports = {
         name: 'honey block',
         createdAt: new Date(),
         updatedAt: new Date()
+       },
+       {
+        name: 'gold ingot',
+        createdAt: new Date(),
+        updatedAt: new Date()
        }
      ]);
   },
