@@ -13,5 +13,6 @@ userRoutes.get('/profile', userController.profile);
 userRoutes.put('/profile', userController.update);
 userRoutes.post('/recipes', userController.saveRecipe);
 userRoutes.get('/recipes', userController.getSavedRecipes);
+userRoutes.delete('/recipes', userController.deleteSavedRecipe);
 
 module.exports = userRoutes;

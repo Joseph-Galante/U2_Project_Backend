@@ -33,7 +33,7 @@ userController.authorizeUser = async (req, res, next) =>
         {
             req.user = null;
         }
-
+        console.log(req.user)
         next();
     } catch (error) {
         // status 400 - bad request
@@ -230,7 +230,7 @@ userController.saveRecipe = async (req, res) =>
 userController.getSavedRecipes = async (req, res) =>
 {
     try {
-        // grab recipe by name
+        // grab recipes by name
         const recipes = await req.user.getRecipes();
         // check if recipes exist
         if (recipes)
@@ -244,6 +244,30 @@ userController.getSavedRecipes = async (req, res) =>
         }
     } catch (error) {
         res.status(400).json({ error: 'could not get saved recipes' });
+    }
+}
+
+// delete saved recipe
+userController.deleteSavedRecipe = async (req, res) =>
+{
+    try {
+        // grab recipe by name
+        const recipe = await models.recipe.findOne({ where: { name: req.body.recipe}})
+        // check if recipe exist
+        if (recipe)
+        {
+            // remove recipe from saved list
+            req.user.removeRecipe(recipe);
+
+            res.json({ message: 'recipe deleted successfully'});
+        }
+        // no recipe found
+        else
+        {
+            res.status(404).json({ error: 'could not find recipe' });
+        }
+    } catch (error) {
+        res.status(400).json({ error: 'could not delete recipe' });
     }
 }
 
