@@ -33,7 +33,7 @@ userController.authorizeUser = async (req, res, next) =>
         {
             req.user = null;
         }
-        console.log(req.user)
+        
         next();
     } catch (error) {
         // status 400 - bad request
